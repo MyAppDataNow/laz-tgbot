@@ -1,0 +1,83 @@
+object MainForm: TMainForm
+  Left = 325
+  Height = 577
+  Top = 91
+  Width = 845
+  Caption = 'Бот для телеграмм'
+  ClientHeight = 577
+  ClientWidth = 845
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '3.4.0.0'
+  object memLog: TMemo
+    Left = 0
+    Height = 577
+    Top = 0
+    Width = 845
+    Align = alClient
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    Left = 59
+    Top = 62
+    object mmProgram: TMenuItem
+      Caption = 'Программа'
+      object mmAgent: TMenuItem
+        Caption = 'Почтовый агент'
+        object mmActivateAgent: TMenuItem
+          AutoCheck = True
+          Caption = 'Запуск'
+          OnClick = mmActivateAgentClick
+        end
+        object Separator2: TMenuItem
+          Caption = '-'
+        end
+        object mmAgentSettings: TMenuItem
+          Caption = 'Параметры'
+          OnClick = mmAgentSettingsClick
+        end
+        object mmAgentFilter: TMenuItem
+          Caption = 'Фильтр'
+          OnClick = mmAgentFilterClick
+        end
+      end
+      object mmBot: TMenuItem
+        Caption = 'Телеграмм бот'
+        object mmActivateBot: TMenuItem
+          AutoCheck = True
+          Caption = 'Запуск'
+          OnClick = mmActivateBotClick
+        end
+        object Separator3: TMenuItem
+          Caption = '-'
+        end
+        object mmBotSettings: TMenuItem
+          Caption = 'Параметры'
+          OnClick = mmBotSettingsClick
+        end
+        object mmBotFilter: TMenuItem
+          Caption = 'Фильтр'
+          OnClick = mmBotFilterClick
+        end
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object mmQuit: TMenuItem
+        Caption = 'Выход'
+        ShortCut = 32856
+        OnClick = mmQuitClick
+      end
+    end
+    object mmHelp: TMenuItem
+      Caption = 'Справка'
+      object mmAbout: TMenuItem
+        Caption = 'О программе'
+        OnClick = mmAboutClick
+      end
+    end
+  end
+end

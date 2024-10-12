@@ -1,0 +1,106 @@
+object maOptionsForm: TmaOptionsForm
+  Left = 522
+  Height = 145
+  Top = 288
+  Width = 637
+  BorderStyle = bsSingle
+  Caption = 'Настройки (почтовый агент)'
+  ClientHeight = 145
+  ClientWidth = 637
+  DesignTimePPI = 108
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object lblIMAPHostname: TLabel
+    Left = 8
+    Height = 18
+    Top = 8
+    Width = 100
+    Caption = 'Сервер IMAP4'
+  end
+  object lblSMTPHostname: TLabel
+    Left = 14
+    Height = 18
+    Top = 40
+    Width = 94
+    Caption = 'Сервер SMTP'
+  end
+  object lblUsername: TLabel
+    Left = 65
+    Height = 18
+    Top = 72
+    Width = 43
+    Caption = 'Логин'
+  end
+  object lblPassword: TLabel
+    Left = 240
+    Height = 18
+    Top = 72
+    Width = 53
+    Caption = 'Пароль'
+  end
+  object edIMAP4Hostname: TEdit
+    Left = 118
+    Height = 30
+    Top = 3
+    Width = 514
+    AutoSelect = False
+    TabOrder = 0
+  end
+  object edSMTPHostname: TEdit
+    Left = 118
+    Height = 30
+    Top = 35
+    Width = 514
+    AutoSelect = False
+    TabOrder = 1
+  end
+  object edUsername: TEdit
+    Left = 118
+    Height = 30
+    Top = 68
+    Width = 114
+    AutoSelect = False
+    TabOrder = 2
+  end
+  object edPassword: TEdit
+    Left = 304
+    Height = 30
+    Top = 68
+    Width = 114
+    AutoSelect = False
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 3
+  end
+  object cbxShowPassword: TCheckBox
+    Left = 424
+    Height = 21
+    Top = 70
+    Width = 89
+    Caption = 'Показать'
+    TabOrder = 4
+    OnChange = cbxShowPasswordChange
+  end
+  object bbtOk: TBitBtn
+    Left = 214
+    Height = 34
+    Top = 104
+    Width = 100
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object bbtCancel: TBitBtn
+    Left = 318
+    Height = 34
+    Top = 105
+    Width = 100
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 6
+  end
+end

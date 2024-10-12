@@ -1,0 +1,60 @@
+object tgOptionsForm: TtgOptionsForm
+  Left = 408
+  Height = 86
+  Top = 166
+  Width = 641
+  BorderStyle = bsSingle
+  Caption = 'Настройки (телеграмм бот)'
+  ClientHeight = 86
+  ClientWidth = 641
+  DesignTimePPI = 108
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object lblTgBotToken: TLabel
+    Left = 8
+    Height = 18
+    Top = 10
+    Width = 40
+    Caption = 'Токен'
+  end
+  object edToken: TEdit
+    Left = 56
+    Height = 30
+    Top = 5
+    Width = 482
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+  object cbxShowToken: TCheckBox
+    Left = 544
+    Height = 21
+    Top = 10
+    Width = 89
+    Caption = 'Показать'
+    TabOrder = 1
+    OnChange = cbxShowTokenChange
+  end
+  object bbtOk: TBitBtn
+    Left = 216
+    Height = 34
+    Top = 41
+    Width = 100
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object bbtCancel: TBitBtn
+    Left = 324
+    Height = 34
+    Top = 41
+    Width = 100
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 3
+  end
+end

@@ -1,0 +1,33 @@
+object maFilterForm: TmaFilterForm
+  Left = 353
+  Height = 768
+  Top = 67
+  Width = 1024
+  Caption = 'Фильтр для писем (почтовый агент)'
+  ClientHeight = 768
+  ClientWidth = 1024
+  DesignTimePPI = 108
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object lvFilter: TListView
+    Left = 0
+    Height = 768
+    Top = 0
+    Width = 1024
+    Align = alClient
+    Columns = <>
+    PopupMenu = pmListView
+    TabOrder = 0
+    OnSelectItem = lvFilterSelectItem
+  end
+  object pmListView: TPopupMenu
+    Left = 56
+    Top = 16
+  end
+  object pmListViewItem: TPopupMenu
+    Left = 56
+    Top = 80
+  end
+end

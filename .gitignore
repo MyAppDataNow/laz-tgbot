@@ -79,3 +79,11 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+lib/
+backup/
+
+# Ignore executables
+botMain.exe
+botMain
+botMain.dbg
+botMain_dbg.exe
